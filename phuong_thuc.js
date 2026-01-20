@@ -4,6 +4,7 @@ export default class PhuongThuc_Product {
        this.Product = Product;
     };
     Get_Product(Product) {
+        console.log("câu 1")
          console.log("danh sách  sản phẩm ")
         for (const element of this.Product) {
             console.log(element)
@@ -11,6 +12,7 @@ export default class PhuongThuc_Product {
     }
     //cau 2
     Get_Product_Name_Price(Product) {
+            console.log("câu 2")
         console.log("In sản phẩm name và giá")
         this.Product.map((element) => {
             console.log({
@@ -21,12 +23,14 @@ export default class PhuongThuc_Product {
     }
     // câu 3
     Get_Product_Quantity_be_khong(Product) {
+            console.log("câu 3")
         console.log("kiểm tra đã có sản phẩm nào hết hàng chưa ")
-        const het_hang = this.Product.filter(item => item.quantity > 0);
+        const het_hang = this.Product.filter(item => Number(item.quantity) > 0);
         console.log("Hết hàng:", het_hang);
     }
     // câu 4
     Get_Some_tren_30(Product) {
+            console.log("câu 4")
          console.log("kiểm tra tồn tại sản phẩm có giá 30.000Đ không")
         const itgia30 = this.Product.some(item => item.price > 30000)
         if (itgia30 === true) return console.log("có ")
@@ -34,17 +38,20 @@ export default class PhuongThuc_Product {
     }
     // cau 5
     Get_Kiem_Ngung_Ban(Product) {
+            console.log("câu 5")
         const ngung_ban = this.Product.some(item => item.inAvailable === false)
         console.log(ngung_ban === false ? "không có sản phẩm nào ngưng bán" : " có sản phẩm ngưng bán")
     }
     // cau 6
     Get_Tinh_tong(Product) {
+            console.log("câu 6")
         console.log("kiểm tra tổng tài sản")
         const tong = this.Product.reduce((curr, acc) => curr += (Number(acc.price) * Number(acc.quantity)), 0)
         console.log("tong tài sản là" + tong)
     }
     // cau 7
     Get_Name_Categroy_Price(Product) {
+            console.log("câu 7")
         console.log("Sản phẩm được in có  danh mục và  tên là ")
         for (const element of this.Product) {
             console.log({
@@ -56,6 +63,7 @@ export default class PhuongThuc_Product {
     }
     // cau 8
     Get_Name_Categroy_Price(Product) {
+            console.log("câu 8")
         console.log("Sản phẩm được in có  danh mục và  tên  thêm đang bán hay ngừng bán là ")
         for (const element of this.Product) {
             console.log({
@@ -67,8 +75,9 @@ export default class PhuongThuc_Product {
     }
     // cau 9
     Get_Product_In(Product) {
+            console.log("câu 9")
+        console.log("Sản phẩm được in  là  : ")
         for (const e in this.Product) {
-            console.log("Sản phẩm được in  là  : ")
             console.log( { 
                 id : this.Product[e].id,
                 name :  this.Product[e].name, 
@@ -80,6 +89,7 @@ export default class PhuongThuc_Product {
     }
     // cau 10
     Get_Danh_Sach_Ten_Ban(Product){
+            console.log("câu 10")
         console.log("danh sách bán")
         console.log(this.Product.filter(e=> e.inAvailable === true))
     }
