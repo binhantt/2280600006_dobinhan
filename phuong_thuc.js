@@ -56,8 +56,8 @@ export default class PhuongThuc_Product {
     }
     // cau 8
     Get_Name_Categroy_Price(Product) {
+        console.log("Sản phẩm được in có  danh mục và  tên  thêm đang bán hay ngừng bán là ")
         for (const element of this.Product) {
-             console.log("Sản phẩm được in có  danh mục và  tên  thêm đang bán hay ngừng bán là ")
             console.log({
                 NAme: element.name,
                 categroy: element.categroy,
