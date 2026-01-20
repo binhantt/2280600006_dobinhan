@@ -70,7 +70,7 @@ export default class PhuongThuc_Product {
         }
     }
     Get_Danh_Sach_Ten_Ban(Product){
-       
-        console.log( Product.filter((e)=> e.inAvailable === true))
+        console.log("danh sách bán")
+        console.log(this.Product.filter(e=> e.inAvailable === true))
     }
 }
