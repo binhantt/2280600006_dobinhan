@@ -69,5 +69,8 @@ export default class PhuongThuc_Product {
             })
         }
     }
-    
+    Get_Danh_Sach_Ten_Ban(Product){
+       
+        console.log( Product.filter((e)=> e.inAvailable === true))
+    }
 }
