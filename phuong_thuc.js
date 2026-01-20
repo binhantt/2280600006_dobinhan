@@ -39,14 +39,14 @@ export default class PhuongThuc_Product {
     }
     // cau 6
     Get_Tinh_tong(Product) {
-           console.log("kiểm tra tổng tài sản")
+        console.log("kiểm tra tổng tài sản")
         const tong = this.Product.reduce((curr, acc) => curr += (Number(acc.price) * Number(acc.quantity)), 0)
         console.log("tong tài sản là" + tong)
     }
     // cau 7
     Get_Name_Categroy_Price(Product) {
+        console.log("Sản phẩm được in có  danh mục và  tên là ")
         for (const element of this.Product) {
-             console.log("Sản phẩm được in có  danh mục và  tên là ")
             console.log({
                 NAme: element.name,
                 categroy: element.categroy,
